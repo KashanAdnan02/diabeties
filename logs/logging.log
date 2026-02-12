@@ -1,0 +1,28 @@
+[2026-02-12 13:29:38,330: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 13:29:38,362: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 13:29:38,362: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 13:29:38,363: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "/home/kashanadnan/Code/datascience/src/diabeties/utils/common.py", line 31, in read_yaml
+    return ConfigBox(content)
+           ^^^^^^^^^^^^^^^^^^
+  File "box/box.py", line 295, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kashanadnan/Code/datascience/main.py", line 10, in <module>
+    data_ingestion.initiate_data_ingestion()
+  File "/home/kashanadnan/Code/datascience/src/diabeties/pipeline/data_ingestion_pipeline.py", line 10, in initiate_data_ingestion
+    config=ConfigurationManager()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/src/diabeties/config/configuration.py", line 12, in __init__
+    self.schema=read_yaml(schema_filepath)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/ensure/main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/src/diabeties/utils/common.py", line 33, in read_yaml
+    raise ValueError(f"yaml file is empty")
+ValueError: yaml file is empty
