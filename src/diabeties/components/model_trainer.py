@@ -5,6 +5,8 @@ from sklearn.linear_model import ElasticNet
 import joblib
 from src.diabeties.entity.config_entity import (ModelTrainerConfig)
 
+
+
 class ModelTrainer:
     def __init__(self, config: ModelTrainerConfig):
         self.config = config

@@ -5,6 +5,8 @@ import zipfile
 import pandas as pd
 from src.diabeties.entity.config_entity import (DataValidationConfig)
 
+
+
 class DataValiadtion:
     def __init__(self, config: DataValidationConfig):
         self.config = config

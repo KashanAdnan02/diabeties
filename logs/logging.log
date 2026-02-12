@@ -1,81 +1,227 @@
-[2026-02-12 13:29:38,330: INFO: common: yaml file: config/config.yaml loaded successfully]
-[2026-02-12 13:29:38,362: INFO: common: yaml file: params.yaml loaded successfully]
-[2026-02-12 13:29:38,362: INFO: common: yaml file: schema.yaml loaded successfully]
-[2026-02-12 13:29:38,363: ERROR: main: yaml file is empty]
-Traceback (most recent call last):
-  File "/home/kashanadnan/Code/datascience/src/diabeties/utils/common.py", line 31, in read_yaml
-    return ConfigBox(content)
-           ^^^^^^^^^^^^^^^^^^
-  File "box/box.py", line 295, in box.box.Box.__init__
-box.exceptions.BoxValueError: First argument must be mapping or iterable
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/kashanadnan/Code/datascience/main.py", line 10, in <module>
-    data_ingestion.initiate_data_ingestion()
-  File "/home/kashanadnan/Code/datascience/src/diabeties/pipeline/data_ingestion_pipeline.py", line 10, in initiate_data_ingestion
-    config=ConfigurationManager()
-           ^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/kashanadnan/Code/datascience/src/diabeties/config/configuration.py", line 12, in __init__
-    self.schema=read_yaml(schema_filepath)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/ensure/main.py", line 872, in __call__
-    return_val = self.f(*args, **kwargs)
-                 ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/kashanadnan/Code/datascience/src/diabeties/utils/common.py", line 33, in read_yaml
-    raise ValueError(f"yaml file is empty")
-ValueError: yaml file is empty
-[2026-02-12 13:34:29,272: INFO: common: yaml file: config/config.yaml loaded successfully]
-[2026-02-12 13:34:29,273: INFO: common: yaml file: params.yaml loaded successfully]
-[2026-02-12 13:34:29,275: INFO: common: yaml file: schema.yaml loaded successfully]
-[2026-02-12 13:34:29,275: INFO: common: created directory at: artifacts]
-[2026-02-12 13:34:29,275: INFO: common: created directory at: artifacts/data_ingestion]
-[2026-02-12 13:34:40,462: INFO: common: yaml file: config/config.yaml loaded successfully]
-[2026-02-12 13:34:40,464: INFO: common: yaml file: params.yaml loaded successfully]
-[2026-02-12 13:34:40,467: INFO: common: yaml file: schema.yaml loaded successfully]
-[2026-02-12 13:34:40,468: INFO: common: created directory at: artifacts]
-[2026-02-12 13:34:40,468: INFO: common: created directory at: artifacts/data_validation]
-[2026-02-12 13:34:40,732: INFO: common: yaml file: config/config.yaml loaded successfully]
-[2026-02-12 13:34:40,734: INFO: common: yaml file: params.yaml loaded successfully]
-[2026-02-12 13:34:40,737: INFO: common: yaml file: schema.yaml loaded successfully]
-[2026-02-12 13:34:40,737: INFO: common: created directory at: artifacts]
-[2026-02-12 13:34:40,738: INFO: common: created directory at: artifacts/data_transformation]
-[2026-02-12 13:34:41,765: INFO: data_transformation: Splited data into training and test sets]
-[2026-02-12 13:34:41,765: INFO: data_transformation: (75000, 9)]
-[2026-02-12 13:34:41,765: INFO: data_transformation: (25000, 9)]
-[2026-02-12 13:34:41,770: INFO: common: yaml file: config/config.yaml loaded successfully]
-[2026-02-12 13:34:41,773: INFO: common: yaml file: params.yaml loaded successfully]
-[2026-02-12 13:34:41,776: INFO: common: yaml file: schema.yaml loaded successfully]
-[2026-02-12 13:34:41,776: INFO: common: created directory at: artifacts]
-[2026-02-12 13:34:41,776: INFO: common: created directory at: artifacts/model_trainer]
-[2026-02-12 13:34:41,959: ERROR: main: could not convert string to float: 'Female']
+[2026-02-12 14:31:19,782: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 14:31:19,783: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 14:31:19,784: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 14:31:19,784: INFO: common: created directory at: artifacts]
+[2026-02-12 14:31:19,784: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-12 14:31:19,784: INFO: data_ingestion: File already exists]
+[2026-02-12 14:31:19,800: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 14:31:19,800: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 14:31:19,801: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 14:31:19,801: INFO: common: created directory at: artifacts]
+[2026-02-12 14:31:19,801: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-12 14:31:19,871: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 14:31:19,872: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 14:31:19,873: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 14:31:19,873: INFO: common: created directory at: artifacts]
+[2026-02-12 14:31:19,873: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-12 14:31:19,874: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 14:31:19,875: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 14:31:19,875: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 14:31:19,875: INFO: common: created directory at: artifacts]
+[2026-02-12 14:31:19,875: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-12 14:31:19,875: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
 Traceback (most recent call last):
   File "/home/kashanadnan/Code/datascience/main.py", line 31, in <module>
     model_trainer.initiate_model_training()
   File "/home/kashanadnan/Code/datascience/src/diabeties/pipeline/model_trainer_pipeline.py", line 13, in initiate_model_training
     model_trainer_config.train()
-  File "/home/kashanadnan/Code/datascience/src/diabeties/components/model_trainer.py", line 24, in train
-    lr.fit(train_x, train_y)
-  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1336, in wrapper
-    return fit_method(estimator, *args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/sklearn/linear_model/_coordinate_descent.py", line 1025, in fit
-    X, y = validate_data(
-           ^^^^^^^^^^^^^^
-  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2919, in validate_data
-    X, y = check_X_y(X, y, **check_params)
+  File "/home/kashanadnan/Code/datascience/src/diabeties/components/model_trainer.py", line 13, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1314, in check_X_y
-    X = check_array(
-        ^^^^^^^^^^^^
-  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1022, in check_array
-    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/sklearn/utils/_array_api.py", line 878, in _asarray_with_order
-    array = numpy.asarray(array, order=order, dtype=dtype)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 2171, in __array__
-    arr = np.asarray(values, dtype=dtype)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ValueError: could not convert string to float: 'Female'
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2026-02-12 14:41:25,983: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 14:41:25,983: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 14:41:25,984: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 14:41:25,984: INFO: common: created directory at: artifacts]
+[2026-02-12 14:41:25,985: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-12 14:41:41,232: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 14:41:41,234: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 14:41:41,236: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 14:41:41,236: INFO: common: created directory at: artifacts]
+[2026-02-12 14:41:41,236: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-12 14:41:41,337: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 14:41:41,337: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 14:41:41,338: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 14:41:41,338: INFO: common: created directory at: artifacts]
+[2026-02-12 14:41:41,339: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-12 14:41:41,340: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 14:41:41,341: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 14:41:41,342: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 14:41:41,342: INFO: common: created directory at: artifacts]
+[2026-02-12 14:41:41,342: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-12 14:41:41,343: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "/home/kashanadnan/Code/datascience/main.py", line 31, in <module>
+    model_trainer.initiate_model_training()
+  File "/home/kashanadnan/Code/datascience/src/diabeties/pipeline/model_trainer_pipeline.py", line 13, in initiate_model_training
+    model_trainer_config.train()
+  File "/home/kashanadnan/Code/datascience/src/diabeties/components/model_trainer.py", line 13, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2026-02-12 17:54:51,045: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 17:54:51,097: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 17:54:51,103: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 17:54:51,104: INFO: common: created directory at: artifacts]
+[2026-02-12 17:54:51,104: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-12 17:54:51,104: INFO: data_ingestion: File already exists]
+[2026-02-12 17:54:51,235: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 17:54:51,236: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 17:54:51,237: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 17:54:51,237: INFO: common: created directory at: artifacts]
+[2026-02-12 17:54:51,237: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-12 17:54:51,443: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 17:54:51,444: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 17:54:51,446: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 17:54:51,447: INFO: common: created directory at: artifacts]
+[2026-02-12 17:54:51,447: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-12 17:54:51,450: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 17:54:51,451: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 17:54:51,452: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 17:54:51,452: INFO: common: created directory at: artifacts]
+[2026-02-12 17:54:51,453: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-12 17:54:51,453: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "/home/kashanadnan/Code/datascience/main.py", line 31, in <module>
+    model_trainer.initiate_model_training()
+  File "/home/kashanadnan/Code/datascience/src/diabeties/pipeline/model_trainer_pipeline.py", line 13, in initiate_model_training
+    model_trainer_config.train()
+  File "/home/kashanadnan/Code/datascience/src/diabeties/components/model_trainer.py", line 13, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2026-02-12 17:55:08,168: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 17:55:08,170: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 17:55:08,171: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 17:55:08,171: INFO: common: created directory at: artifacts]
+[2026-02-12 17:55:08,171: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-12 17:55:12,126: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 17:55:12,127: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 17:55:12,128: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 17:55:12,129: INFO: common: created directory at: artifacts]
+[2026-02-12 17:55:12,129: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-12 17:55:12,283: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 17:55:12,285: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 17:55:12,287: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 17:55:12,288: INFO: common: created directory at: artifacts]
+[2026-02-12 17:55:12,288: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-12 17:55:12,290: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 17:55:12,291: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 17:55:12,293: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 17:55:12,293: INFO: common: created directory at: artifacts]
+[2026-02-12 17:55:12,293: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-12 17:55:12,293: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "/home/kashanadnan/Code/datascience/main.py", line 31, in <module>
+    model_trainer.initiate_model_training()
+  File "/home/kashanadnan/Code/datascience/src/diabeties/pipeline/model_trainer_pipeline.py", line 13, in initiate_model_training
+    model_trainer_config.train()
+  File "/home/kashanadnan/Code/datascience/src/diabeties/components/model_trainer.py", line 13, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'
+[2026-02-12 18:30:24,220: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 18:30:24,220: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 18:30:24,221: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 18:30:24,221: INFO: common: created directory at: artifacts]
+[2026-02-12 18:30:24,221: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-12 18:30:25,203: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 18:30:25,203: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 18:30:25,204: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 18:30:25,204: INFO: common: created directory at: artifacts]
+[2026-02-12 18:30:25,204: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-12 18:30:25,300: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 18:30:25,300: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 18:30:25,301: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 18:30:25,302: INFO: common: created directory at: artifacts]
+[2026-02-12 18:30:25,302: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-12 18:30:25,303: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 18:30:25,304: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 18:30:25,305: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 18:30:25,305: INFO: common: created directory at: artifacts]
+[2026-02-12 18:30:25,305: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-12 18:30:25,305: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv']
+Traceback (most recent call last):
+  File "/home/kashanadnan/Code/datascience/main.py", line 31, in <module>
+    model_trainer.initiate_model_training()
+  File "/home/kashanadnan/Code/datascience/src/diabeties/pipeline/model_trainer_pipeline.py", line 13, in initiate_model_training
+    model_trainer_config.train()
+  File "/home/kashanadnan/Code/datascience/src/diabeties/components/model_trainer.py", line 13, in train
+    train_data = pd.read_csv(self.config.train_data_path)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_transformation/train.csv'

@@ -14,6 +14,7 @@ data_validation:
 data_transformation:
   root_dir: artifacts/data_transformation
   data_path: artifacts/data_ingestion/diabetes_prediction_dataset.csv
+  target_column: diabetes 
 
 model_trainer:
   root_dir: artifacts/model_trainer
