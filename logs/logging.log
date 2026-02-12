@@ -26,3 +26,56 @@ Traceback (most recent call last):
   File "/home/kashanadnan/Code/datascience/src/diabeties/utils/common.py", line 33, in read_yaml
     raise ValueError(f"yaml file is empty")
 ValueError: yaml file is empty
+[2026-02-12 13:34:29,272: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 13:34:29,273: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 13:34:29,275: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 13:34:29,275: INFO: common: created directory at: artifacts]
+[2026-02-12 13:34:29,275: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-02-12 13:34:40,462: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 13:34:40,464: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 13:34:40,467: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 13:34:40,468: INFO: common: created directory at: artifacts]
+[2026-02-12 13:34:40,468: INFO: common: created directory at: artifacts/data_validation]
+[2026-02-12 13:34:40,732: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 13:34:40,734: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 13:34:40,737: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 13:34:40,737: INFO: common: created directory at: artifacts]
+[2026-02-12 13:34:40,738: INFO: common: created directory at: artifacts/data_transformation]
+[2026-02-12 13:34:41,765: INFO: data_transformation: Splited data into training and test sets]
+[2026-02-12 13:34:41,765: INFO: data_transformation: (75000, 9)]
+[2026-02-12 13:34:41,765: INFO: data_transformation: (25000, 9)]
+[2026-02-12 13:34:41,770: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2026-02-12 13:34:41,773: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-02-12 13:34:41,776: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-02-12 13:34:41,776: INFO: common: created directory at: artifacts]
+[2026-02-12 13:34:41,776: INFO: common: created directory at: artifacts/model_trainer]
+[2026-02-12 13:34:41,959: ERROR: main: could not convert string to float: 'Female']
+Traceback (most recent call last):
+  File "/home/kashanadnan/Code/datascience/main.py", line 31, in <module>
+    model_trainer.initiate_model_training()
+  File "/home/kashanadnan/Code/datascience/src/diabeties/pipeline/model_trainer_pipeline.py", line 13, in initiate_model_training
+    model_trainer_config.train()
+  File "/home/kashanadnan/Code/datascience/src/diabeties/components/model_trainer.py", line 24, in train
+    lr.fit(train_x, train_y)
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1336, in wrapper
+    return fit_method(estimator, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/sklearn/linear_model/_coordinate_descent.py", line 1025, in fit
+    X, y = validate_data(
+           ^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 2919, in validate_data
+    X, y = check_X_y(X, y, **check_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1314, in check_X_y
+    X = check_array(
+        ^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 1022, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/sklearn/utils/_array_api.py", line 878, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kashanadnan/Code/datascience/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 2171, in __array__
+    arr = np.asarray(values, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'Female'
