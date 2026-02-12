@@ -1,6 +1,5 @@
 from src.diabeties.config.configuration import ConfigurationManager
 from src.diabeties.components.model_evaluation import ModelEvaluation
-from src.diabeties import logger
 
 class ModelEvaluationTrainingPipeline:
     def __init__(self):

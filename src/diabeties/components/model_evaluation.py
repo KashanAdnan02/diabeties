@@ -10,13 +10,10 @@ from src.diabeties.entity.config_entity import (ModelEvaluationConfig)
 from src.diabeties.constants import *
 from src.diabeties.utils.common import read_yaml, create_directories,save_json
 
-
 import os
 os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/KashanAdnan02/diabeties.mlflow/"
 os.environ["MLFLOW_TRACKING_USERNAME"]="KashanAdnan02"
 os.environ["MLFLOW_TRACKING_PASSWORD"]="0b3c46a2082fda864bb06352494ef5f1abde7118"
-
-
 
 class ModelEvaluation:
     def __init__(self, config: ModelEvaluationConfig):

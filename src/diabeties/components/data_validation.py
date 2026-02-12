@@ -5,8 +5,6 @@ import zipfile
 import pandas as pd
 from src.diabeties.entity.config_entity import (DataValidationConfig)
 
-
-
 class DataValiadtion:
     def __init__(self, config: DataValidationConfig):
         self.config = config
@@ -30,6 +28,8 @@ class DataValiadtion:
                     validation_status = True
                     with open(self.config.STATUS_FILE, 'w') as f:
                         f.write(f"Validation status: {validation_status}")
+                
+                logger.info("data validation done!")
 
             return validation_status
         

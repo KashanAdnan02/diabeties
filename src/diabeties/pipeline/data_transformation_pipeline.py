@@ -1,6 +1,5 @@
 from src.diabeties.config.configuration import ConfigurationManager
 from src.diabeties.components.data_transformation import DataTransformation
-from src.diabeties import logger
 
 from pathlib import Path
 

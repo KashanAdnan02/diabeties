@@ -53,6 +53,7 @@ class ConfigurationManager:
         data_transformation_config = DataTransformationConfig(
             root_dir=config.root_dir,
             data_path=config.data_path,
+            target_column=config.target_column,
         )
 
         return data_transformation_config
