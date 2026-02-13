@@ -7,40 +7,28 @@ from src.diabeties.pipeline.prediction_pipeline import PredictionPipeline
 
 app = Flask(__name__)
 
-@app.route('/',methods=['GET']) 
+@app.route('/',methods=['GET'])
 def homePage():
     return render_template("index.html")
-
-
-@app.route('/train',methods=['GET'])
-def training():
-    os.system("python main.py")
-    return "Training Successful!" 
-
 
 @app.route('/predict',methods=['POST','GET'])
 def index():
     if request.method == 'POST':
         try:
-            fixed_acidity =float(request.form['fixed_acidity'])
-            volatile_acidity =float(request.form['volatile_acidity'])
-            citric_acid =float(request.form['citric_acid'])
-            residual_sugar =float(request.form['residual_sugar'])
-            chlorides =float(request.form['chlorides'])
-            free_sulfur_dioxide =float(request.form['free_sulfur_dioxide'])
-            total_sulfur_dioxide =float(request.form['total_sulfur_dioxide'])
-            density =float(request.form['density'])
-            pH =float(request.form['pH'])
-            sulphates =float(request.form['sulphates'])
-            alcohol =float(request.form['alcohol'])
-       
+            gender =int(request.form['gender'])
+            age =float(request.form['age'])
+            hypertension =float(request.form['hypertension'])
+            heart_disease =float(request.form['heart_disease'])
+            smoking_history =int(request.form['smoking_history'])
+            bmi =float(request.form['bmi'])
+            HbA1c_level =float(request.form['HbA1c_level'])
+            blood_glucose_level =float(request.form['blood_glucose_level'])
          
-            data = [fixed_acidity,volatile_acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,pH,sulphates,alcohol]
-            data = np.array(data).reshape(1, 11)
+            data = [gender,age,hypertension,heart_disease,smoking_history,bmi,HbA1c_level,blood_glucose_level]
+            data = np.array(data).reshape(1, 8)
             
             obj = PredictionPipeline()
             predict = obj.predict(data)
-
             return render_template('results.html', prediction = str(predict))
 
         except Exception as e:
