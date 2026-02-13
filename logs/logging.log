@@ -161,3 +161,17 @@ TypeError: The view function for 'index' did not return a valid response. The fu
  * Running on http://192.168.1.17:8080]
 [2026-02-14 00:25:13,687: INFO: _internal: [33mPress CTRL+C to quit[0m]
 [2026-02-14 00:25:18,894: INFO: _internal: 127.0.0.1 - - [14/Feb/2026 00:25:18] "POST /predict HTTP/1.1" 200 -]
+[2026-02-14 00:44:02,624: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.17:8080]
+[2026-02-14 00:44:02,624: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-02-14 00:44:20,148: INFO: _internal: 127.0.0.1 - - [14/Feb/2026 00:44:20] "GET / HTTP/1.1" 200 -]
+[2026-02-14 00:47:58,148: INFO: _internal: 127.0.0.1 - - [14/Feb/2026 00:47:58] "GET / HTTP/1.1" 200 -]
+[2026-02-14 00:48:01,801: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.17:8080]
+[2026-02-14 00:48:01,802: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-02-14 00:48:04,102: INFO: _internal: 127.0.0.1 - - [14/Feb/2026 00:48:04] "GET / HTTP/1.1" 200 -]
+[2026-02-14 00:48:25,710: INFO: _internal: 127.0.0.1 - - [14/Feb/2026 00:48:25] "GET / HTTP/1.1" 200 -]
